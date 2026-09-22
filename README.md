@@ -11,7 +11,7 @@ overlay is put together, start here.
 
 ## the example
 
-[**Reveal**](https://github.com/YOURNAME/Reveal) is a ~500-line skeleton ESP. It
+[**Reveal**](https://github.com/shiedless/Reveal) is a ~500-line skeleton ESP. It
 reads `GWorld`, walks the actors, pulls each character's bone pose straight out of
 the skeletal mesh, projects the joints to screen and draws a figure. That is the
 whole thing. It's deliberately tiny so the data path is legible end to end, and
@@ -21,22 +21,22 @@ it's the concrete version of every note below.
 
 Read them in this order if you're new, each one leans on the last:
 
-1. [**ios-binary-re-notes**](https://github.com/YOURNAME/ios-binary-re-notes)
+1. [**ios-binary-re-notes**](https://github.com/shiedless/ios-binary-re-notes)
    getting a decrypted binary, picking the right slice, loading it, and reading
    an iOS app at all. The groundwork.
-2. [**xor-string-deobf-notes**](https://github.com/YOURNAME/xor-string-deobf-notes)
+2. [**xor-string-deobf-notes**](https://github.com/shiedless/xor-string-deobf-notes)
    breaking the XOR string obfuscation you hit the moment the app hides anything.
-3. [**arm64-ios-inline-hook-notes**](https://github.com/YOURNAME/arm64-ios-inline-hook-notes)
+3. [**arm64-ios-inline-hook-notes**](https://github.com/shiedless/arm64-ios-inline-hook-notes)
    inline hooks by hand, W^X, instruction relocation, the icache, PAC. The four
    things that crash you.
-4. [**ue4-ios-gworld-gnames-notes**](https://github.com/YOURNAME/ue4-ios-gworld-gnames-notes)
+4. [**ue4-ios-gworld-gnames-notes**](https://github.com/shiedless/ue4-ios-gworld-gnames-notes)
    finding the two globals everything hangs off, and the anti-tamper traps around
    them.
-5. [**ue4-ios-fname-notes**](https://github.com/YOURNAME/ue4-ios-fname-notes)
+5. [**ue4-ios-fname-notes**](https://github.com/shiedless/ue4-ios-fname-notes)
    turning an FName index into a string, which you need to match anything by name.
-6. [**ue4-ios-processevent-notes**](https://github.com/YOURNAME/ue4-ios-processevent-notes)
+6. [**ue4-ios-processevent-notes**](https://github.com/shiedless/ue4-ios-processevent-notes)
    finding `ProcessEvent`, the funnel every UFunction call goes through.
-7. [**tencent-ace-anogs-notes**](https://github.com/YOURNAME/tencent-ace-anogs-notes)
+7. [**tencent-ace-anogs-notes**](https://github.com/shiedless/tencent-ace-anogs-notes)
    how Tencent's ACE anti-cheat is built and why the naive attacks on it fail.
    Analysis, not a bypass.
 
