@@ -1,0 +1,32 @@
+name: Correction
+description: Something in one of the notes is wrong, outdated, or unclear
+labels: [correction]
+body:
+  - type: dropdown
+    id: note
+    attributes:
+      label: Which note
+      options:
+        - ios-ue4-re (this index)
+        - ios-binary-re-notes
+        - xor-string-deobf-notes
+        - arm64-ios-inline-hook-notes
+        - ue4-ios-gworld-gnames-notes
+        - ue4-ios-fname-notes
+        - ue4-ios-processevent-notes
+        - tencent-ace-anogs-notes
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong
+      description: Quote the section or paste a link to the line.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What it should say
+      description: The correct behaviour, and how you verified it (device, iOS version, engine build) if it applies.

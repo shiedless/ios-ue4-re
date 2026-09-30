@@ -1,0 +1,16 @@
+name: Question
+description: Ask about something in the notes
+labels: [question]
+body:
+  - type: input
+    id: note
+    attributes:
+      label: Which note
+      placeholder: e.g. ue4-ios-fname-notes
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you tried and where you got stuck.
+    validations:
+      required: true
