@@ -1,0 +1,10 @@
+title: ios-ue4-re
+description: Reverse engineering Unreal Engine 4 games on iOS (arm64 / arm64e) — a seven-part series of read-only notes.
+url: https://shiedless.github.io
+baseurl: /ios-ue4-re
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+  - CITATION.cff
