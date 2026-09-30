@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title | default: site.title }} · {{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<style>
+:root{--bg:#0c0d10;--panel:#14161a;--line:#262a31;--fg:#e6e8eb;--mute:#9aa1ab;--red:#e5484d;--blue:#58a6ff;
+ --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--sans)}
+.top{border-bottom:1px solid var(--line)}
+.top div{max-width:880px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:13px var(--mono);color:var(--mute)}
+.top a{color:var(--mute);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{color:var(--fg);font-weight:600}.top b span{color:var(--red)}
+main{max-width:880px;margin:0 auto;padding:36px 20px 64px}
+h1,h2,h3{line-height:1.25;text-wrap:balance}
+h1{font-size:40px;letter-spacing:-1px;margin:.2em 0}
+h2{font-size:26px;margin-top:2.2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:19px;margin-top:1.8em}
+p,li{color:#cfd3d9}
+a{color:var(--blue)}
+hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}
+code{font:14px var(--mono);background:var(--panel);padding:2px 6px;border-radius:5px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1.2em 0;padding:.2em 1em;border-left:3px solid var(--red);color:var(--mute)}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--panel)}
+img{max-width:100%}
+.mermaid{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin:1.2em 0;overflow-x:auto;text-align:center}
+.mermaid:not([data-processed]){white-space:pre;text-align:left;font:13px var(--mono);color:var(--mute)}
+footer{border-top:1px solid var(--line);color:var(--mute);font:13px var(--mono)}
+footer div{max-width:880px;margin:0 auto;padding:18px 20px}
+</style>
+</head>
+<body>
+<header class="top"><div><a href="{{ site.baseurl }}/"><b>ios-<span>ue4</span>-re</b></a><span><a href="https://github.com/shiedless/ios-ue4-re">source</a> · <a href="https://github.com/shiedless/ios-ue4-re/discussions">discussions</a> · <a href="https://github.com/shiedless">github.com/shiedless</a></span></div></header>
+<main>
+{{ content }}
+</main>
+<footer><div>MIT · read-only notes · stops at understanding on purpose</div></footer>
+<script>
+document.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='table-wrap';t.parentNode.insertBefore(w,t);w.appendChild(t);});
+const blocks=[...document.querySelectorAll('div.language-mermaid, pre > code.language-mermaid')];
+if(blocks.length){
+  blocks.forEach(b=>{const src=(b.querySelector('code')||b).textContent;const d=document.createElement('div');d.className='mermaid';d.textContent=src;(b.closest('div.language-mermaid')||b.parentElement).replaceWith(d);});
+  const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+  s.onload=()=>{mermaid.initialize({startOnLoad:false,theme:'dark'});mermaid.run({querySelector:'.mermaid'});};
+  document.head.appendChild(s);
+}
+</script>
+</body>
+</html>
