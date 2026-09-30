@@ -144,6 +144,15 @@ Same approach, other engines and tools:
 
 ---
 
+## questions and corrections
+
+- **questions, ideas, "how did you find X"** → [Discussions](https://github.com/shiedless/ios-ue4-re/discussions)
+- **something in a note is wrong or outdated** → [open a correction](https://github.com/shiedless/ios-ue4-re/issues/new?template=correction.yml) — there's a dropdown for which note
+
+If the notes saved you time, a ⭐ on the repo helps other people find them.
+
+---
+
 ## license
 
 MIT across the board.
