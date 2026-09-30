@@ -131,6 +131,19 @@ you want with the knowledge, but the repos themselves don't ship attacks.
 
 ---
 
+## beyond ue4
+
+Same approach, other engines and tools:
+
+| repo | what it covers |
+|------|----------------|
+| [**unity-il2cpp-esp-tutorial**](https://github.com/shiedless/unity-il2cpp-esp-tutorial) | the unity il2cpp side — a native objc overlay from `dump.cs` to screen, plain uikit |
+| [**roblox-ios-luau-vm-notes**](https://github.com/shiedless/roblox-ios-luau-vm-notes) | reversing roblox's luau runtime on iOS: functions, anchors, `lua_State` layout |
+| [**ios-messiah-re**](https://github.com/shiedless/ios-messiah-re) | netease's messiah engine: an ecs with no `GWorld`, a python gameplay layer, telemetry anti-cheat |
+| [**ida-pro-guide**](https://github.com/shiedless/ida-pro-guide) | getting around a binary in IDA — useful for every note above |
+
+---
+
 ## license
 
 MIT across the board.
