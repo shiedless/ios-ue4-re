@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you reference these notes, please cite them like this."
+title: "ios-ue4-re: reverse engineering Unreal Engine 4 games on iOS (arm64 / arm64e)"
+type: software
+authors:
+  - alias: shiedless
+repository-code: "https://github.com/shiedless/ios-ue4-re"
+url: "https://github.com/shiedless/ios-ue4-re"
+license: MIT
+version: "1.0"
+date-released: "2026-09-30"
+keywords:
+  - ios
+  - reverse-engineering
+  - unreal-engine-4
+  - arm64
+  - arm64e
